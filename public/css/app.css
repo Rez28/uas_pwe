@@ -1,0 +1,195 @@
+/* Warna Utama */
+:root {
+    --color-light: #DFF2EB;
+    --color-aqua: #B9E5E8;
+    --color-medium: #7AB2D3;
+    --color-dark: #4A628A;
+}
+
+/* Global Body */
+body {
+    background-color: var(--color-light);
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.custom-navbar {
+    background-color: var(--color-dark); /* Warna Dark untuk navbar */
+    border-bottom: 3px solid var(--color-medium); /* Border bawah navbar */
+}
+
+.navbar-brand {
+    color: var(--color-aqua); /* Warna teks untuk brand logo */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Logo di kiri */
+.navbar-logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: var(--color-aqua); /* Warna untuk link */
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-light); /* Warna link pada hover */
+    text-decoration: underline;
+}
+/* Menggunakan font Lacquer */
+.lacquer-regular {
+    font-family: "Lacquer", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+  /* Menggunakan font Exo 2 untuk elemen tertentu */
+  .exo-2-hero-title {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700; /* Bold untuk judul */
+    font-style: normal;
+  }
+  
+  .exo-2-description {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300; /* Light untuk paragraf */
+    font-style: normal;
+  }
+  
+  .image-wrapper {
+    position: relative;
+    width: 500px; /* Lebar elemen */
+    height: 400px; /* Tinggi elemen */
+    background: #9EC8B9; /* Warna latar belakang */
+    border-radius: 90px 90px 90px 200px; /* Sudut melengkung */
+    padding: 20px; /* Padding di dalam elemen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Agar gambar tidak keluar dari elemen */
+}
+
+.clipped-image {
+    border-radius: 90px 90px 90px 200px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Tombol Login */
+.btn-outline-success {
+    border-color: var(--color-medium); /* Warna border tombol */
+    color: var(--color-medium); /* Warna teks tombol */
+    font-weight: bold;
+}
+
+.btn-outline-success:hover {
+    background-color: var(--color-medium); /* Warna background saat hover */
+    color: white; /* Warna teks saat hover */
+}
+
+/* Posisi navbar item agar berada di kanan */
+.navbar-nav.ms-auto {
+    margin-left: auto; /* Memastikan navbar item berada di kanan */
+}
+/* Tombol Login */
+.btn-outline-success {
+    border-color: var(--color-medium); /* Warna border tombol */
+    color: var(--color-medium); /* Warna teks tombol */
+    font-weight: bold;
+    border-radius: 30px; /* Mengubah border radius untuk membuat bentuk ellips */
+    padding: 10px 30px; /* Menambah padding agar tombol lebih besar dan berbentuk ellips */
+    transition: all 0.3s ease; /* Efek transisi pada hover */
+}
+
+.btn-outline-success:hover {
+    background-color: var(--color-medium); /* Warna background saat hover */
+    color: white; /* Warna teks saat hover */
+    border-color: var(--color-medium); /* Pastikan warna border sesuai saat hover */
+}
+
+
+.search-btn:hover {
+    background-color: var(--color-dark); /* Warna background saat hover tombol */
+    color: var(--color-light); /* Warna teks saat hover tombol */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+}
+
+.btn-dftr {
+    border-radius: 35px;
+    background: linear-gradient(90deg, #092635,#235d7a,#569abc,#91d4f6);
+    border: none;
+    padding: 7px;
+    width: 200px;
+    height: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5C8374;
+    padding: 20px 40px;
+    border-radius: 80px;
+    width: 1050px;
+    height: 150px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  .contact-item {
+    text-align: center;
+    flex: 1;
+    margin: 0 20px;
+  }
+  
+  .contact-item i {
+    font-size: 2rem;
+    color: #a29bfe;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  
+  .contact-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #dfe6e9;
+  }
+  
+  .contact-item p {
+    font-size: 0.9rem;
+    color: #b2bec3;
+  }
+  
+  /* Icon Styling */
+  .icon-location::before {
+    content: "📍"; /* Replace with an icon library if needed */
+  }
+  
+  .icon-phone::before {
+    content: "📞"; /* Replace with an icon library if needed */
+  }
+  
+  .icon-email::before {
+    content: "✉️"; /* Replace with an icon library if needed */
+  }
