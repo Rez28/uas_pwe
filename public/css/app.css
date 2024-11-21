@@ -10,8 +10,22 @@
 body {
     background-color: var(--color-light);
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+/* app.css */
+main {
+    margin-bottom: 2rem; /* Atur jarak antara main content dan footer */
+    flex: 1;    
+}
+footer {
+    margin-top: 2rem; /* Tambahkan ruang di atas footer */
 }
 
+span{
+    font-weight: bold; 
+    color: #5C8374;
+}
 /* Navbar */
 .custom-navbar {
     background-color: var(--color-dark); /* Warna Dark untuk navbar */
@@ -76,9 +90,28 @@ body {
     align-items: center;
     overflow: hidden; /* Agar gambar tidak keluar dari elemen */
 }
+.image-wrapper2 {
+    position: relative;
+    width: 500px; /* Lebar elemen */
+    height: 400px; /* Tinggi elemen */
+    background: #9EC8B9; /* Warna latar belakang */
+    border-radius: 250px 80px 250px 80px; /* Sudut melengkung */
+    padding: 20px; /* Padding di dalam elemen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Agar gambar tidak keluar dari elemen */
+}
 
 .clipped-image {
     border-radius: 90px 90px 90px 200px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.clipped-image2 {
+    border-radius: 250px 80px 250px 80px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -134,7 +167,64 @@ body {
         width: 100%;
     }
 }
-
+.timeline{
+    position: relative;
+    width: 80%;
+    height: 200px;
+  }
+  
+  /* Gelombang */
+  .wave {
+    position: absolute;
+    top: 40%; /* Mengatur posisi lebih ke atas */
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 1;
+    transform: translateY(-50%);
+  }
+  
+  /* Langkah-Langkah */
+  .step {
+    position: absolute;
+    top: 50%; /* Tetap sejajar dengan garis */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+  }
+  
+  /* Lingkaran */
+  .circle {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #6a5acd;
+    border: 10px solid rgba(53, 53, 53, 0.5); /* Border dengan warna ungu dan transparansi 50% */
+    overflow: hidden;
+    display: flex; /* Menggunakan Flexbox */
+    align-items: center; /* Untuk membuat konten di tengah secara vertikal */
+    justify-content: center; /* Untuk membuat konten di tengah secara horizontal */
+  }
+  
+  /* Angka di Lingkaran */
+  .number {
+    font-size: 24px; /* Lebih besar agar mudah terbaca */
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    display: block;
+  }
+  
+  /* Deskripsi */
+  .description {
+    margin-top: 10px;
+    font-size: 14px;
+    max-width: 150px;
+    color: #000000;
+  }
+  
+  
 .btn-dftr {
     border-radius: 35px;
     background: linear-gradient(90deg, #092635,#235d7a,#569abc,#91d4f6);
@@ -156,6 +246,14 @@ body {
     height: 150px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
+  .divider {
+    width: 1px; /* Ketebalan garis vertikal */
+    height: 70%; /* Tinggi garis */
+    background-color: #ccc; /* Warna garis */
+    border: 1px solid #ccc; /* Border dengan warna dan gaya */
+    margin: 0 10px; /* Jarak horizontal */
+}
+
   
   .contact-item {
     text-align: center;
