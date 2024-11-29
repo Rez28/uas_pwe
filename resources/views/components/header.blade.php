@@ -1,36 +1,17 @@
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light position-relative">
-        <div class="container">
-            <!-- Logo di kiri -->
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="{{ asset('images/logo fix.png') }}" alt="Logo" width="70" height="70">
-            </a>
-            <!-- Tombol Toggle untuk versi mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Navigasi dan Form pencarian -->
-            <div class="col-3">
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <!-- Navigasi di kanan atas -->
-                <div class="d-flex flex-row bd-highlight mb-3 top-0 end-0 p-3">
-                    <ul class="navbar-nav d-inline-flex me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="landing-page">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="landing-page.about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="landing-page.about">Contact</a>
-                        </li>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title', 'Silat Championship')</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lacquer&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
 
-                    </ul>
-                        <button class="btn btn-outline-success" onclick="location.href='{{ route('login') }}'">Login</button>
-
-                </div>
-            </div>
-        </div>
-        </div>
-    </nav>
-</header>

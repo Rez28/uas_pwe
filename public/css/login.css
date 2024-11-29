@@ -2,13 +2,13 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #DFF2EB, #B9E5E8);
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(135deg, #dff2eb, #b9e5e8);
 }
 
 /* Card Login */
 .card {
-    background: linear-gradient(145deg, #7AB2D3, #4A628A);
+    background: linear-gradient(145deg, #7ab2d3, #4a628a);
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -43,7 +43,7 @@ body {
     border: none;
     border-radius: 8px;
     padding: 10px;
-    background-color: #DFF2EB;
+    background-color: #dff2eb;
     transition: all 0.3s ease;
 }
 
@@ -54,7 +54,7 @@ body {
 
 /* Button styling */
 .btn-primary {
-    background-color: #4A628A;
+    background-color: #4a628a;
     border: none;
     border-radius: 6px;
     font-size: 16px;
@@ -63,13 +63,13 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #7AB2D3;
+    background-color: #7ab2d3;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Teks link */
 .text-center a {
-    color: #DFF2EB;
+    color: #dff2eb;
     text-decoration: none;
     font-weight: bold;
 }
@@ -84,4 +84,3 @@ body {
         width: 90%;
     }
 }
-

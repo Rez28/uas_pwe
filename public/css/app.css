@@ -1,31 +1,144 @@
 /* Warna Utama */
 :root {
-    --color-light: #DFF2EB;
-    --color-aqua: #B9E5E8;
-    --color-medium: #7AB2D3;
-    --color-dark: #4A628A;
+    --color-light: #ffff00;
+    --color-aqua: #00ff00;
+    --color-medium: #7ab2d3;
+    --color-dark: #4a628a;
 }
 
 /* Global Body */
 body {
-    background-color: var(--color-light);
+    /* background-color: var(--color-light); */
+    background: linear-gradient(
+        90deg,
+        #170e25,
+        #2e1f45df,
+        #2e1f45df,
+        #2e1f45df,
+        #170e25
+    );
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
 }
+
 /* app.css */
 main {
     margin-bottom: 2rem; /* Atur jarak antara main content dan footer */
-    flex: 1;    
-}
-footer {
-    margin-top: 2rem; /* Tambahkan ruang di atas footer */
+    flex: 1;
 }
 
-span{
-    font-weight: bold; 
-    color: #5C8374;
+/* Divider Styling */
+.divider {
+    width: 1px; /* Ketebalan garis vertikal */
+    height: 70%; /* Tinggi garis */
+    background: linear-gradient(
+        transparent,
+        #ccc,
+        transparent
+    ); /* Gradient dengan transparansi di ujung */
+    margin: auto 20px; /* Jarak horizontal */
+    border: none; /* Pastikan border tidak digunakan */
 }
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f4a261; /* Highlight color */
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f4a261;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 576px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .divider {
+        display: none; /* Hilangkan divider pada layar kecil */
+    }
+}
+
+.carousel-inner img {
+    height: 600px; /* Atur tinggi sesuai kebutuhan */
+    object-fit: cover; /* Menyesuaikan gambar tanpa distorsi */
+    width: 100%; /* Pastikan gambar selalu memenuhi lebar slide */
+    filter: brightness(50%);
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .carousel-inner img {
+        height: 300px; /* Atur tinggi lebih kecil untuk layar kecil */
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-inner img {
+        height: 200px; /* Atur tinggi lebih kecil untuk layar sangat kecil */
+    }
+}
+
+span {
+    font-weight: bold;
+    color: #ffff00;
+}
+
 /* Navbar */
 .custom-navbar {
     background-color: var(--color-dark); /* Warna Dark untuk navbar */
@@ -55,106 +168,85 @@ span{
     color: var(--color-light); /* Warna link pada hover */
     text-decoration: underline;
 }
+
 /* Menggunakan font Lacquer */
 .lacquer-regular {
     font-family: "Lacquer", system-ui;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  
-  /* Menggunakan font Exo 2 untuk elemen tertentu */
-  .exo-2-hero-title {
+}
+
+/* Menggunakan font Exo 2 untuk elemen tertentu */
+.exo-2-hero-title {
     font-family: "Exo 2", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700; /* Bold untuk judul */
     font-style: normal;
-  }
-  
-  .exo-2-description {
+}
+
+.exo-2-description {
     font-family: "Exo 2", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300; /* Light untuk paragraf */
     font-style: normal;
-  }
-  
-  .image-wrapper {
+}
+
+.image-wrapper,
+.image-wrapper2 {
     position: relative;
-    width: 500px; /* Lebar elemen */
-    height: 400px; /* Tinggi elemen */
-    background: #9EC8B9; /* Warna latar belakang */
-    border-radius: 90px 90px 90px 200px; /* Sudut melengkung */
-    padding: 20px; /* Padding di dalam elemen */
+    width: 500px;
+    height: 400px;
+    background: #9ec8b9;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden; /* Agar gambar tidak keluar dari elemen */
 }
+
+.image-wrapper {
+    border-radius: 90px 90px 90px 200px; /* Sudut melengkung */
+}
+
 .image-wrapper2 {
-    position: relative;
-    width: 500px; /* Lebar elemen */
-    height: 400px; /* Tinggi elemen */
-    background: #9EC8B9; /* Warna latar belakang */
     border-radius: 250px 80px 250px 80px; /* Sudut melengkung */
-    padding: 20px; /* Padding di dalam elemen */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Agar gambar tidak keluar dari elemen */
+}
+
+.clipped-image,
+.clipped-image2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .clipped-image {
     border-radius: 90px 90px 90px 200px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-.clipped-image2 {
-    border-radius: 250px 80px 250px 80px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
 }
 
+.clipped-image2 {
+    border-radius: 250px 80px 250px 80px;
+}
 
 /* Tombol Login */
 .btn-outline-success {
-    border-color: var(--color-medium); /* Warna border tombol */
-    color: var(--color-medium); /* Warna teks tombol */
+    border-color: var(--color-medium);
+    color: var(--color-medium);
     font-weight: bold;
+    border-radius: 30px;
+    padding: 10px 30px;
+    transition: all 0.3s ease;
 }
 
 .btn-outline-success:hover {
-    background-color: var(--color-medium); /* Warna background saat hover */
-    color: white; /* Warna teks saat hover */
+    background-color: var(--color-medium);
+    color: white;
+    border-color: var(--color-medium);
 }
 
 /* Posisi navbar item agar berada di kanan */
 .navbar-nav.ms-auto {
-    margin-left: auto; /* Memastikan navbar item berada di kanan */
-}
-/* Tombol Login */
-.btn-outline-success {
-    border-color: var(--color-medium); /* Warna border tombol */
-    color: var(--color-medium); /* Warna teks tombol */
-    font-weight: bold;
-    border-radius: 30px; /* Mengubah border radius untuk membuat bentuk ellips */
-    padding: 10px 30px; /* Menambah padding agar tombol lebih besar dan berbentuk ellips */
-    transition: all 0.3s ease; /* Efek transisi pada hover */
-}
-
-.btn-outline-success:hover {
-    background-color: var(--color-medium); /* Warna background saat hover */
-    color: white; /* Warna teks saat hover */
-    border-color: var(--color-medium); /* Pastikan warna border sesuai saat hover */
-}
-
-
-.search-btn:hover {
-    background-color: var(--color-dark); /* Warna background saat hover tombol */
-    color: var(--color-light); /* Warna teks saat hover tombol */
+    margin-left: auto;
 }
 
 /* Responsif */
@@ -167,127 +259,264 @@ span{
         width: 100%;
     }
 }
-.timeline{
+
+.timeline {
     position: relative;
     width: 80%;
     height: 200px;
-  }
-  
-  /* Gelombang */
-  .wave {
+    margin-top: 20px;
+}
+
+/* Gelombang */
+.wave {
     position: absolute;
     top: 40%; /* Mengatur posisi lebih ke atas */
-    left: 0;
-    width: 100%;
-    height: 150px;
+    left: -25%;
+    width: 173%;
+    height: 200px;
     z-index: 1;
     transform: translateY(-50%);
-  }
-  
-  /* Langkah-Langkah */
-  .step {
+}
+
+/* Langkah-Langkah */
+.step {
     position: absolute;
-    top: 50%; /* Tetap sejajar dengan garis */
-    transform: translate(-50%, -50%);
+    top: 50%;
+    transform: translate(50%, -50%);
     text-align: center;
     z-index: 2;
-  }
-  
-  /* Lingkaran */
-  .circle {
+}
+
+/* Lingkaran dengan shadow mirip border */
+.circle {
     position: relative;
-    width: 90px;
-    height: 90px;
+    width: 125px;
+    height: 125px;
     border-radius: 50%;
-    background-color: #6a5acd;
-    border: 10px solid rgba(53, 53, 53, 0.5); /* Border dengan warna ungu dan transparansi 50% */
+    background: linear-gradient(90deg, #006340, #0f8a5f, #2ab081);
     overflow: hidden;
-    display: flex; /* Menggunakan Flexbox */
-    align-items: center; /* Untuk membuat konten di tengah secara vertikal */
-    justify-content: center; /* Untuk membuat konten di tengah secara horizontal */
-  }
-  
-  /* Angka di Lingkaran */
-  .number {
-    font-size: 24px; /* Lebih besar agar mudah terbaca */
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Angka di Lingkaran */
+.number {
+    font-size: 34px;
     font-weight: bold;
     color: #fff;
     text-align: center;
     display: block;
-  }
-  
-  /* Deskripsi */
-  .description {
-    margin-top: 10px;
+}
+
+/* Deskripsi */
+.description {
+    margin-top: 20px;
     font-size: 14px;
     max-width: 150px;
     color: #000000;
-  }
-  
-  
+}
+
+/* Tombol DFTR */
 .btn-dftr {
+    text-align: var(--color-light);
     border-radius: 35px;
-    background: linear-gradient(90deg, #092635,#235d7a,#569abc,#91d4f6);
+    background: linear-gradient(
+        90deg,
+        #170e25,
+        #2e1f45df,
+        #2e1f45df,
+        #2e1f45df,
+        #170e25
+    );
     border: none;
     padding: 7px;
     width: 200px;
     height: 50px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+/* Contact Section */
 .contact-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #5C8374;
+    background-color: #5c8374;
     padding: 20px 40px;
     border-radius: 80px;
     width: 1050px;
     height: 150px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  }
-  .divider {
-    width: 1px; /* Ketebalan garis vertikal */
-    height: 70%; /* Tinggi garis */
-    background-color: #ccc; /* Warna garis */
-    border: 1px solid #ccc; /* Border dengan warna dan gaya */
-    margin: 0 10px; /* Jarak horizontal */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-  
-  .contact-item {
+/* Divider Styling in Contact */
+.divider {
+    width: 1px;
+    height: 70%;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    margin: 0 10px;
+}
+
+.contact-item {
     text-align: center;
-    flex: 1;
-    margin: 0 20px;
-  }
-  
-  .contact-item i {
-    font-size: 2rem;
-    color: #a29bfe;
+    color: #fff;
+    font-size: 15px;
+}
+
+.contact-item i {
+    font-size: 30px;
     margin-bottom: 10px;
-    display: inline-block;
-  }
-  
-  .contact-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-    color: #dfe6e9;
-  }
-  
-  .contact-item p {
-    font-size: 0.9rem;
-    color: #b2bec3;
-  }
-  
-  /* Icon Styling */
-  .icon-location::before {
-    content: "📍"; /* Replace with an icon library if needed */
-  }
-  
-  .icon-phone::before {
-    content: "📞"; /* Replace with an icon library if needed */
-  }
-  
-  .icon-email::before {
-    content: "✉️"; /* Replace with an icon library if needed */
-  }
+}
+
+.contact-item h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Warna Utama */
+:root {
+    --color-light: #ffff00;
+    --color-aqua: #00ff00;
+    --color-medium: #7ab2d3;
+    --color-dark: #4a628a;
+}
+
+/* Global Body */
+body {
+    background: linear-gradient(
+        90deg,
+        #170e25,
+        #2e1f45df,
+        #2e1f45df,
+        #2e1f45df,
+        #170e25
+    );
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.custom-navbar {
+    background-color: var(--color-dark);
+    border-bottom: 3px solid var(--color-medium);
+}
+
+.navbar-brand {
+    color: var(--color-aqua);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: var(--color-aqua);
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-light);
+    text-decoration: underline;
+}
+
+/* Sidebar */
+.sidenav {
+    height: 100%;
+    width: 250px; /* Lebar penuh saat terbuka */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #170e25, #2e1f45df, #170e25);
+    overflow-x: hidden;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease-in-out; /* Animasi transisi */
+}
+
+/* Sidebar collapsed */
+.sidenav.collapsed {
+    width: 60px; /* Lebar saat collapsed */
+}
+
+/* Style links */
+.sidenav a {
+    padding: 12px 20px; /* Jarak elemen */
+    text-decoration: none;
+    font-size: 16px; /* Ukuran teks default */
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+    gap: 12px; /* Jarak antara ikon dan teks */
+}
+
+/* Hide text when collapsed */
+.sidenav.collapsed .nav-text {
+    display: none; /* Sembunyikan teks */
+}
+
+/* Adjust link padding and alignment for icons */
+.sidenav.collapsed a {
+    justify-content: center; /* Pusatkan ikon */
+    padding: 12px; /* Kurangi padding */
+}
+
+/* Add hover effect */
+.sidenav a:hover {
+    background-color: #f8f9fa;
+    color: #2e1f45;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style icons */
+.sidenav a svg {
+    width: 22px; /* Ukuran ikon */
+    height: 22px;
+    transition: transform 0.3s ease; /* Tambahkan animasi */
+}
+
+/* Adjust font size */
+.sidenav a h5 {
+    font-size: 15px;
+    margin: 0;
+    font-weight: 500; /* Tebal teks */
+}
+
+/* Style the content */
+.content {
+    margin-left: 200px;
+    padding-left: 20px;
+}
+
+/* Main Content */
+main {
+    margin-left: 250px;
+    margin-bottom: 2rem;
+    flex: 1;
+}
+
+/* Statistik Cards */
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grafik */
+.card-body canvas {
+    max-height: 300px;
+    max-width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
